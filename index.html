@@ -15,15 +15,29 @@ body {
 </style>
 <script type='text/javascript'>
 window.onload=function(){
+	px=0
+	py=0
+	mulx=1
+	muly=1
+	x=Math.round(Math.random()*4)
+        y=Math.round(Math.random()*4)
 	var t=function(){
-	x=Math.round(Math.random()*10)-5
-	y=Math.round(Math.random()*10)-5
-	document.getElementById('cheval').style.position='relative';
-	document.getElementById('cheval').style.left=x+'px';
-	document.getElementById('cheval').style.top=y+'px';
-	setTimeout(t,1000);
+        px=px+x*mulx
+	py=py+y*muly
+
+	if ( (px > 200) || (px < -200) ){
+		mulx=0-mulx;
 	}
-	setTimeout(t.bind(t),1000);
+	if ( (py > 350) || (py < 0) ){
+		muly=0-muly;
+	}
+
+	document.getElementById('cheval').style.position='relative';
+	document.getElementById('cheval').style.left=px+'px';
+	document.getElementById('cheval').style.top=py+'px';
+	setTimeout(t,30,x,y);
+	}
+	setTimeout(t.bind(t,x,y),30);
 }
 	
 
