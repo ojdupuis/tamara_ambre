@@ -1,0 +1,39 @@
+<html>
+<head>
+<style>
+body {
+	background-image: url(http://sosduneterrienneendetresse.s.o.pic.centerblog.net/o/f1dc58a1.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-color: #0000FF;
+}
+
+.tamara {
+	color: #FFFFFF;
+	font-size: 30px;
+}
+</style>
+<script type='text/javascript'>
+window.onload=function(){
+	var t=function(){
+	x=Math.round(Math.random()*10)-5
+	y=Math.round(Math.random()*10)-5
+	document.getElementById('cheval').style.position='relative';
+	document.getElementById('cheval').style.left=x+'px';
+	document.getElementById('cheval').style.top=y+'px';
+	setTimeout(t,1000);
+	}
+	setTimeout(t.bind(t),1000);
+}
+	
+
+</script>
+<head>
+<body>
+<center><div class='tamara'><b>Tamara et Ambre !</b></div>
+<br/>
+<img id ='cheval' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSlsckhkBZlm4GnKQ7gWtfomaPxUPjV5KoUP7uhypjEfYVSQSOzw'>
+
+</center>
+</body>
+</html>
